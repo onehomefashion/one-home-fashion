@@ -3,209 +3,111 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ONE HOME & FASHION</title>
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<title>Casalinghi – ONE HOME & FASHION</title>
 
 <style>
-:root{
-  --nero:#000;
-  --rosso:#c00000;
-  --bianco:#fff;
-  --grigio:#f5f5f5;
-}
-
 body{
   margin:0;
   font-family:Arial, Helvetica, sans-serif;
-  background:var(--bianco);
-  color:var(--nero);
+  background:#ffffff;
+  color:#000;
 }
 
-/* ===== HEADER ALLINEATO ===== */
-.header-bar{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  padding:15px 30px;
-  flex-wrap:wrap;
-}
-
-.header-left{
-  display:flex;
-  align-items:center;
-  gap:18px;
-}
-
-.header-left a{
-  font-size:34px;
-  color:var(--nero);
-  transition:0.3s;
-}
-.header-left a:hover{
-  color:var(--rosso);
-}
-
-.logo-center{
+header{
   text-align:center;
-}
-.logo-center img{
-  height:120px;
-}
-.logo-center p{
-  margin:8px 0 0;
-  font-weight:bold;
+  padding:30px 20px;
 }
 
-.header-right{
-  text-align:right;
-  font-size:1.1rem;
+header h1{
+  color:#c00000;
+  letter-spacing:2px;
 }
 
-/* ===== MENU REPARTI ===== */
-.menu-reparti{
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  gap:20px;
-  background:var(--nero);
-  padding:15px 10px;
-}
-
-.menu-reparti a{
-  color:var(--bianco);
-  text-decoration:none;
-  font-weight:bold;
-  padding:8px 14px;
-  transition:0.3s;
-}
-
-.menu-reparti a:hover{
-  background:var(--rosso);
-}
-
-.menu-reparti .promo{
-  color:var(--rosso);
-  font-size:1.2rem;
-}
-
-/* ===== SEZIONE IMMAGINI ===== */
-.reparti-gallery{
+.gallery{
   max-width:1200px;
-  margin:60px auto;
+  margin:40px auto;
   padding:0 20px;
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
   gap:30px;
 }
 
-.reparto-card{
+.card{
   position:relative;
-  overflow:hidden;
   border-radius:16px;
+  overflow:hidden;
   box-shadow:0 10px 25px rgba(0,0,0,0.15);
 }
 
-.reparto-card img{
+.card img{
   width:100%;
   height:280px;
   object-fit:cover;
-  transition:0.5s;
+  transition:0.4s;
 }
 
-.reparto-card:hover img{
+.card:hover img{
   transform:scale(1.08);
 }
 
-.reparto-title{
+.card-title{
   position:absolute;
   bottom:0;
   width:100%;
   background:rgba(0,0,0,0.6);
   color:white;
-  text-align:center;
   padding:12px;
-  font-size:1.1rem;
+  text-align:center;
   font-weight:bold;
-  letter-spacing:1px;
 }
 
-/* ===== RESPONSIVE ===== */
-@media(max-width:900px){
-  .header-bar{
-    flex-direction:column;
-    gap:15px;
-  }
-  .header-right{
-    text-align:center;
-  }
+.back{
+  text-align:center;
+  margin:40px 0;
+}
+
+.back a{
+  text-decoration:none;
+  color:#c00000;
+  font-weight:bold;
 }
 </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
-<div class="header-bar">
+<header>
+  <h1>REPARTO CASALINGHI</h1>
+  <p>Scopri alcuni dei nostri articoli</p>
+</header>
 
-  <div class="header-left">
-    <a href="https://www.google.com/maps/place/ONE+HOME+%26+FASHION/" target="_blank"><i class="fas fa-map-marker-alt"></i></a>
-    <a href="https://www.instagram.com/one_home_fashion_/" target="_blank"><i class="fab fa-instagram"></i></a>
-    <a href="https://wa.me/39055959556" target="_blank"><i class="fab fa-whatsapp"></i></a>
-  </div>
+<section class="gallery">
 
-  <div class="logo-center">
-    <img src="image/logo1.jpg" alt="ONE HOME & FASHION">
-    <p>ONE HOME & FASHION – ABBIGLIAMENTO E CASALINGHI</p>
-  </div>
-
-  <div class="header-right">
-    055 959556<br>
-    Via della Comunità Europea 18<br>
-    Figline Incisa Valdarno (FI)
-  </div>
-
-</div>
-
-<!-- MENU REPARTI -->
-<div class="menu-reparti">
-  <a href="casalinghi.html">CASALINGHI</a>
-  <a href="abbigliamento.html">ABBIGLIAMENTO</a>
-  <a href="cartoleria.html">CARTOLERIA</a>
-  <a href="mobili.html">MOBILI</a>
-  <a href="pet.html">PET</a>
-  <a href="arredamento.html">ARREDAMENTO</a>
-  <a href="idee-regalo.html">IDEE REGALO</a>
-  <a href="detersivi.html">DETERSIVI</a>
-  <a href="cucina.html">CUCINA</a>
-  <a href="fiori.html">FIORI</a>
-  <a href="promo.html" class="promo">PROMO</a>
-</div>
-
-<!-- GALLERY REPARTI -->
-<section class="reparti-gallery">
-
-  <div class="reparto-card">
+  <div class="card">
     <img src="image/COSMETICI1.jpg" alt="Cosmetici">
-    <div class="reparto-title">COSMETICI</div>
+    <div class="card-title">COSMETICI</div>
   </div>
 
-  <div class="reparto-card">
+  <div class="card">
     <img src="image/cornici1.jpg" alt="Cornici">
-    <div class="reparto-title">CORNICI & DECORAZIONI</div>
+    <div class="card-title">CORNICI & DECORAZIONI</div>
   </div>
 
-  <div class="reparto-card">
+  <div class="card">
     <img src="image/ferramenta.jpg" alt="Ferramenta">
-    <div class="reparto-title">FERRAMENTA</div>
+    <div class="card-title">FERRAMENTA</div>
   </div>
 
-  <div class="reparto-card">
+  <div class="card">
     <img src="image/giocattoli1.jpg" alt="Giocattoli">
-    <div class="reparto-title">GIOCATTOLI</div>
+    <div class="card-title">GIOCATTOLI</div>
   </div>
 
 </section>
+
+<div class="back">
+  <a href="index.html">← Torna alla Home</a>
+</div>
 
 </body>
 </html>
