@@ -1,344 +1,211 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ONE HOME & FASHION</title>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-  <style>
-    :root {
-      --primary: #000000;
-      --secondary: #ff0000;
-      --light: #ffffff;
-      --menu-bg: #1a1a1a;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ONE HOME & FASHION</title>
 
-    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-    body {
-      margin: 0;
-      font-family: 'Roboto', Arial, sans-serif;
-      background: var(--light);
-      color: var(--primary);
-      line-height: 1.6;
-    }
+<style>
+:root{
+  --nero:#000;
+  --rosso:#c00000;
+  --bianco:#fff;
+  --grigio:#f5f5f5;
+}
 
-    /* HEADER TOP: ICONA SOCIAL + INFO CONTATTI */
-    .top-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 20px;
-      flex-wrap: wrap;
-    }
+body{
+  margin:0;
+  font-family:Arial, Helvetica, sans-serif;
+  background:var(--bianco);
+  color:var(--nero);
+}
 
-    .social-left a {
-      font-size: 32px;
-      color: var(--primary);
-      margin-right: 15px;
-      transition: color 0.3s;
-    }
-    .social-left a:hover {
-      color: var(--secondary);
-    }
+/* ===== HEADER ALLINEATO ===== */
+.header-bar{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:15px 30px;
+  flex-wrap:wrap;
+}
 
-    .contact-right {
-      text-align: right;
-      font-size: 1.1rem;
-      line-height: 1.3;
-    }
+.header-left{
+  display:flex;
+  align-items:center;
+  gap:18px;
+}
 
-    /* LOGO CENTRATO */
-    .logo-center {
-      text-align: center;
-      margin: 15px 0;
-    }
-    .logo-center img {
-      height: 120px;
-      width: auto;
-    }
-    .header-text {
-      text-align: center;
-      font-size: 1.3rem;
-      font-weight: bold;
-      margin-top: 10px;
-    }
+.header-left a{
+  font-size:34px;
+  color:var(--nero);
+  transition:0.3s;
+}
+.header-left a:hover{
+  color:var(--rosso);
+}
 
-    /* MENU REPARTI */
-    .menu-reparti {
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-      background: var(--menu-bg);
-      padding: 12px 0;
-      flex-wrap: wrap;
-    }
+.logo-center{
+  text-align:center;
+}
+.logo-center img{
+  height:120px;
+}
+.logo-center p{
+  margin:8px 0 0;
+  font-weight:bold;
+}
 
-    .menu-reparti > div {
-      position: relative;
-    }
+.header-right{
+  text-align:right;
+  font-size:1.1rem;
+}
 
-    .menu-reparti a {
-      text-decoration: none;
-      color: var(--light);
-      font-weight: bold;
-      padding: 8px 12px;
-      display: block;
-      transition: all 0.3s ease;
-    }
+/* ===== MENU REPARTI ===== */
+.menu-reparti{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:20px;
+  background:var(--nero);
+  padding:15px 10px;
+}
 
-    .menu-reparti a:hover {
-      background: var(--secondary);
-      color: var(--light);
-    }
+.menu-reparti a{
+  color:var(--bianco);
+  text-decoration:none;
+  font-weight:bold;
+  padding:8px 14px;
+  transition:0.3s;
+}
 
-    /* Sottomenu ABBIGLIAMENTO */
-    .submenu {
-      display: none;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      background: var(--menu-bg);
-      min-width: 150px;
-      border-radius: 5px;
-      z-index: 1000;
-    }
-    .submenu a {
-      padding: 8px 12px;
-      color: var(--light);
-    }
-    .menu-reparti div:hover .submenu {
-      display: block;
-    }
+.menu-reparti a:hover{
+  background:var(--rosso);
+}
 
-    /* PROMO */
-    .promo {
-      background: var(--menu-bg);
-      color: var(--secondary);
-      text-align: center;
-      font-size: 1.5rem;
-      font-weight: bold;
-      padding: 12px 0;
-      width: 100%;
-      letter-spacing: 1px;
-      margin-top: 5px;
-    }
+.menu-reparti .promo{
+  color:var(--rosso);
+  font-size:1.2rem;
+}
 
-    /* MENU PRINCIPALE */
-    nav.main-nav {
-      display: flex;
-      justify-content: center;
-      gap: 25px;
-      margin-top: 15px;
-      flex-wrap: wrap;
-    }
+/* ===== SEZIONE IMMAGINI ===== */
+.reparti-gallery{
+  max-width:1200px;
+  margin:60px auto;
+  padding:0 20px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:30px;
+}
 
-    nav.main-nav a {
-      text-decoration: none;
-      color: var(--primary);
-      font-weight: 700;
-      font-size: 1rem;
-      position: relative;
-    }
+.reparto-card{
+  position:relative;
+  overflow:hidden;
+  border-radius:16px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
 
-    nav.main-nav a::after {
-      content: '';
-      display: block;
-      height: 2px;
-      background: var(--secondary);
-      width: 0;
-      transition: width 0.3s;
-      position: absolute;
-      bottom: -4px;
-      left: 0;
-    }
+.reparto-card img{
+  width:100%;
+  height:280px;
+  object-fit:cover;
+  transition:0.5s;
+}
 
-    nav.main-nav a:hover::after {
-      width: 100%;
-    }
+.reparto-card:hover img{
+  transform:scale(1.08);
+}
 
-    nav.main-nav a:hover {
-      color: var(--secondary);
-    }
+.reparto-title{
+  position:absolute;
+  bottom:0;
+  width:100%;
+  background:rgba(0,0,0,0.6);
+  color:white;
+  text-align:center;
+  padding:12px;
+  font-size:1.1rem;
+  font-weight:bold;
+  letter-spacing:1px;
+}
 
-    /* SEZIONI */
-    section {
-      max-width: 1100px;
-      margin: auto;
-      padding: 60px 20px;
-    }
-
-    h2 {
-      text-align: center;
-      margin-bottom: 40px;
-      font-size: 2rem;
-      color: var(--secondary);
-      letter-spacing: 1px;
-      text-transform: uppercase;
-    }
-
-    /* CARDS */
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 30px;
-    }
-    .card {
-      background: var(--light);
-      padding: 25px;
-      border-radius: 15px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-    }
-    .card h3 {
-      margin-top: 0;
-      color: var(--secondary);
-      font-size: 1.3rem;
-      text-transform: uppercase;
-    }
-    .card p {
-      font-size: 0.95rem;
-      color: var(--primary);
-    }
-
-    footer {
-      background: var(--primary);
-      color: var(--light);
-      text-align: center;
-      padding: 30px 20px;
-      margin-top: 60px;
-    }
-
-    footer p {
-      margin: 5px 0;
-      font-size: 0.9rem;
-    }
-
-    /* RESPONSIVE */
-    @media(max-width:1024px){
-      .top-header {
-        flex-direction: column;
-        align-items: center;
-      }
-      .contact-right {
-        text-align: center;
-        margin-top: 10px;
-      }
-    }
-
-    @media(max-width:768px){
-      .menu-reparti {
-        flex-direction: column;
-        align-items: center;
-      }
-      nav.main-nav {
-        flex-direction: column;
-        gap: 10px;
-      }
-      .submenu {
-        position: relative;
-        top: 0;
-      }
-    }
-  </style>
+/* ===== RESPONSIVE ===== */
+@media(max-width:900px){
+  .header-bar{
+    flex-direction:column;
+    gap:15px;
+  }
+  .header-right{
+    text-align:center;
+  }
+}
+</style>
 </head>
+
 <body>
 
-  <!-- HEADER TOP: ICON SOCIAL + CONTACT INFO -->
-  <div class="top-header">
-    <div class="social-left">
-      <a href="https://www.google.com/maps/place/ONE+HOME+%26+FASHION/@43.6284816,11.4608882,17z/data=!3m1!4b1!4m6!3m5!1s0x132bb100219297b3:0xcc66e2f8cd5b62bb!8m2!3d43.6284777!4d11.4634631!16s%2Fg%2F11wplxq9ct?entry=ttu&g_ep=EgoyMDI2MDIwMy4wIKXMDSoASAFQAw%3D%3D" target="_blank" title="Google Maps"><i class="fas fa-map-marker-alt"></i></a>
-      <a href="https://www.instagram.com/one_home_fashion_/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-      <a href="https://wa.me/39055959556" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-    </div>
-    <div class="contact-right">
-      055959556<br>
-      Via della Comunità Europea 18, Figline Incisa Valdarno (FI)
-    </div>
+<!-- HEADER -->
+<div class="header-bar">
+
+  <div class="header-left">
+    <a href="https://www.google.com/maps/place/ONE+HOME+%26+FASHION/" target="_blank"><i class="fas fa-map-marker-alt"></i></a>
+    <a href="https://www.instagram.com/one_home_fashion_/" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://wa.me/39055959556" target="_blank"><i class="fab fa-whatsapp"></i></a>
   </div>
 
-  <!-- LOGO CENTRATO -->
   <div class="logo-center">
-    <img src="image/logo1.jpg" alt="Logo ONE HOME & FASHION">
-    <div class="header-text">ONE HOME & FASHION, ABBIGLIAMENTO E CASALINGHI</div>
+    <img src="image/logo1.jpg" alt="ONE HOME & FASHION">
+    <p>ONE HOME & FASHION – ABBIGLIAMENTO E CASALINGHI</p>
   </div>
 
-  <!-- MENU REPARTI -->
-  <div class="menu-reparti">
-    <div><a href="casalinghi.html">Casalinghi</a></div>
-    <div>
-      <a href="abbigliamento.html">Abbigliamento ▾</a>
-      <div class="submenu">
-        <a href="abbigliamento-uomo.html">Uomo</a>
-        <a href="abbigliamento-donna.html">Donna</a>
-        <a href="abbigliamento-calzature.html">Calzature</a>
-      </div>
-    </div>
-    <div><a href="mobili.html">Mobili</a></div>
-    <div><a href="pet.html">Pet</a></div>
-    <div><a href="arredamento.html">Arredamento</a></div>
-    <div><a href="idee-regalo.html">Idee Regalo</a></div>
-    <div><a href="detersivi.html">Detersivi</a></div>
-    <div><a href="cucina.html">Cucina</a></div>
-    <div><a href="fiori.html">Fiori</a></div>
+  <div class="header-right">
+    055 959556<br>
+    Via della Comunità Europea 18<br>
+    Figline Incisa Valdarno (FI)
   </div>
 
-  <!-- PROMO -->
-  <div class="promo">PROMO</div>
+</div>
 
-  <!-- MENU PRINCIPALE -->
-  <nav class="main-nav">
-    <a href="#chi-siamo">Chi Siamo</a>
-    <a href="#offerte">Offerte</a>
-    <a href="#sedi">Le Nostre Sedi</a>
-    <a href="#contatti">Contatti</a>
-  </nav>
+<!-- MENU REPARTI -->
+<div class="menu-reparti">
+  <a href="casalinghi.html">CASALINGHI</a>
+  <a href="abbigliamento.html">ABBIGLIAMENTO</a>
+  <a href="cartoleria.html">CARTOLERIA</a>
+  <a href="mobili.html">MOBILI</a>
+  <a href="pet.html">PET</a>
+  <a href="arredamento.html">ARREDAMENTO</a>
+  <a href="idee-regalo.html">IDEE REGALO</a>
+  <a href="detersivi.html">DETERSIVI</a>
+  <a href="cucina.html">CUCINA</a>
+  <a href="fiori.html">FIORI</a>
+  <a href="promo.html" class="promo">PROMO</a>
+</div>
 
-  <!-- SEZIONI PRINCIPALI -->
-  <section id="chi-siamo">
-    <h2>Chi Siamo</h2>
-    <p style="text-align:center; max-width:800px; margin:auto;">
-      <strong>ONE HOME & FASHION</strong> è un negozio dedicato alla casa e all’abbigliamento,
-      nato per offrire ai clienti prodotti pratici, moderni e di tendenza.
-    </p>
-  </section>
+<!-- GALLERY REPARTI -->
+<section class="reparti-gallery">
 
-  <section id="offerte">
-    <h2>Offerte Illustrative</h2>
-    <div class="grid">
-      <div class="card" id="reparto-casalinghi">
-        <h3>Casalinghi</h3>
-      </div>
-      <div class="card" id="reparto-abbigliamento">
-        <h3>Abbigliamento</h3>
-      </div>
-    </div>
-  </section>
+  <div class="reparto-card">
+    <img src="image/COSMETICI1.jpg" alt="Cosmetici">
+    <div class="reparto-title">COSMETICI</div>
+  </div>
 
-  <section id="sedi">
-    <h2>Le Nostre Sedi</h2>
-    <div class="card">
-      <ul class="locations">
-        <li><strong>Sede Principale:</strong> Via della Comunità Europea 18, Figline Incisa Valdarno (FI)</li>
-      </ul>
-    </div>
-  </section>
+  <div class="reparto-card">
+    <img src="image/cornici1.jpg" alt="Cornici">
+    <div class="reparto-title">CORNICI & DECORAZIONI</div>
+  </div>
 
-  <section id="contatti">
-    <h2>Contatti</h2>
-    <div class="card" style="max-width:600px; margin:auto; text-align:center;">
-      <p><strong>Telefono:</strong> 055959556 </p>
-    </div>
-  </section>
+  <div class="reparto-card">
+    <img src="image/ferramenta.jpg" alt="Ferramenta">
+    <div class="reparto-title">FERRAMENTA</div>
+  </div>
 
-  <footer>
-    <p>© 2026 ONE HOME & FASHION</p>
-    <p>Sito a scopo illustrativo</p>
-  </footer>
+  <div class="reparto-card">
+    <img src="image/giocattoli1.jpg" alt="Giocattoli">
+    <div class="reparto-title">GIOCATTOLI</div>
+  </div>
+
+</section>
 
 </body>
 </html>
