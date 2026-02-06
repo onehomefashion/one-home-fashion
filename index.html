@@ -6,21 +6,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ONE HOME & FASHION</title>
   <style>
+    /* COLORI PRINCIPALI */
     :root {
       --primary: #000000;   /* nero */
-      --secondary: #ff0000; /* rosso */
+      --secondary: #ff0000; /* rosso acceso */
       --light: #ffffff;     /* bianco */
+      --accent: #ff4d4d;    /* rosso chiaro per hover */
     }
+
+    /* FONT MODERNO */
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
     body {
       margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: 'Roboto', Arial, sans-serif;
       background: var(--light);
       color: var(--primary);
       line-height: 1.6;
     }
 
-    /* HEADER: logo a sinistra, menu a destra */
+    /* HEADER: logo + menu */
     header {
       background: var(--primary);
       color: var(--light);
@@ -34,25 +39,43 @@
     }
 
     header img {
-      height: 60px; /* altezza del logo */
+      height: 60px;
       width: auto;
     }
 
     nav {
       display: flex;
       gap: 25px;
+      align-items: center;
     }
 
     nav a {
       color: var(--light);
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 700;
       font-size: 1rem;
-      transition: color 0.3s;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    nav a::after {
+      content: '';
+      display: block;
+      height: 2px;
+      background: var(--secondary);
+      width: 0;
+      transition: width 0.3s;
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+    }
+
+    nav a:hover::after {
+      width: 100%;
     }
 
     nav a:hover {
-      color: var(--secondary);
+      color: var(--accent);
     }
 
     section {
@@ -66,8 +89,10 @@
       margin-bottom: 40px;
       font-size: 2rem;
       color: var(--secondary);
+      letter-spacing: 1px;
     }
 
+    /* CARD MODERNE */
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -77,17 +102,30 @@
     .card {
       background: var(--light);
       padding: 25px;
-      border-radius: 10px;
+      border-radius: 15px;
       box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
     }
 
     .card h3 {
       margin-top: 0;
       color: var(--secondary);
+      font-size: 1.3rem;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      color: #333;
     }
 
     .locations li {
       margin-bottom: 10px;
+      color: #333;
     }
 
     footer {
@@ -108,7 +146,7 @@
       header {
         flex-direction: column;
         align-items: flex-start;
-        gap: 15px;
+        gap: 10px;
       }
 
       nav {
@@ -116,10 +154,13 @@
         gap: 10px;
         width: 100%;
       }
+    }
 
-      nav a {
-        font-size: 1.1rem;
-      }
+    /* IMMAGINI */
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
     }
   </style>
 </head>
@@ -127,7 +168,7 @@
 
   <header>
     <!-- Logo a sinistra -->
-    <img src="images/logo1.jpg" alt="Logo ONE HOME & FASHION">
+    <img src="image/logo1.jpg" alt="Logo ONE HOME & FASHION">
     <!-- Menu a destra -->
     <nav>
       <a href="#chi-siamo">Chi Siamo</a>
@@ -152,8 +193,8 @@
     <div class="grid">
       <div class="card">
         <h3>Casalinghi</h3>
-        <p>Articoli per ogni esigenza 15 reparti: ferramenta, auto, bagno, sport, cucina, arredamento, diy, party, giochi, detersivi, animali, pulizia, storage, cosmetica ed elettronica</p>
-        <p><strong>oltre 30.000 articoli selezionati</strong></p>
+        <p>Articoli per ogni esigenza: ferramenta, auto, bagno, sport, cucina, arredamento, diy, party, giochi, detersivi, animali, pulizia, storage, cosmetica ed elettronica.</p>
+        <p><strong>Oltre 30.000 articoli selezionati</strong></p>
       </div>
       <div class="card">
         <h3>Abbigliamento Donna & Uomo</h3>
