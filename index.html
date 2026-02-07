@@ -66,7 +66,7 @@ header{border-bottom:1px solid #ddd;}
   background:#000;
   display:flex;
   justify-content:center;
-  gap:22px;
+  gap:12px;
   padding:16px;
   flex-wrap:wrap;
 }
@@ -75,21 +75,24 @@ header{border-bottom:1px solid #ddd;}
   text-decoration:none;
   font-weight:bold;
 }
-.menu a:hover{color:var(--red);}
-.menu .promo{color:var(--red);}
 .menu a.card{
-  color:#fff;           /* colore testo */
-  background:var(--red);/* sfondo rosso */
+  color:#fff;
+  background:var(--red);
   padding:8px 15px;
   border-radius:5px;
   font-weight:bold;
   text-decoration:none;
   transition:0.3s;
 }
-
 .menu a.card:hover{
-  background:#800000;   /* scuro al passaggio mouse */
+  background:#800000;
   color:#fff;
+}
+.menu .promo{
+  color:var(--red);
+  font-weight:bold;
+  padding:8px 15px;
+  text-decoration:none;
 }
 .menu li{list-style:none; position:relative;}
 .submenu{
@@ -106,7 +109,10 @@ header{border-bottom:1px solid #ddd;}
   display:block;
   padding:6px 10px;
   font-size:.9rem;
+  color:#fff;
+  text-decoration:none;
 }
+.submenu a:hover{color:var(--red);}
 .menu li:hover .submenu{display:block;}
 
 /* ===== SLIDER MARCHI ===== */
@@ -127,71 +133,54 @@ header{border-bottom:1px solid #ddd;}
   to{transform:translateX(-50%);}
 }
 
-/* ===== SEZIONI ===== */
-section{
-  max-width:100%;
-  margin-top:10px;
-  padding:10px 10px;
-}
-
-h2{
-  text-align:center;
-  color:var(--red);
-  letter-spacing:2px;
-  margin-top:10px;
-  margin-bottom:10px;
-}
-
 /* ===== PROMOZIONI ===== */
 .promo-month{
   background:var(--gray);
-  padding:40px 0 80px; /* meno spazio sopra */
+  padding:40px 10px 80px;
 }
-
 .promo-wrapper{
   max-width:1400px;
   margin:auto;
 }
-
 .promo-title{
-  font-size:2.4rem;
+  font-size:2.6rem;
+  text-align:center;
+  margin-bottom:15px;
 }
-
+.promo-text{
+  text-align:center;
+  margin-bottom:30px;
+}
 .promo-layout{
   display:grid;
   grid-template-columns:523px 1fr;
   gap:10px;
   align-items:flex-start;
 }
-
 .promo-poster img{
   width:100%;
-  aspect-ratio: 1 / 1.414;   /* PROPORZIONE A4 */
-  object-fit: contain;       /* non taglia l'immagine */
+  aspect-ratio: 1 / 1.414;
+  object-fit:contain;
   background:#fff;
   box-shadow:0 10px 25px rgba(0,0,0,.2);
 }
-
 .promo-grid{
   display:grid;
   grid-template-columns:repeat(2,1fr);
   gap:10px;
 }
-
 .promo-item{
   background:#fff;
   padding:10px;
   text-align:center;
   box-shadow:0 5px 15px rgba(0,0,0,.1);
 }
-
 .promo-item img{
   width:100%;
   height:140px;
   object-fit:cover;
   margin-bottom:8px;
 }
-
 .price{
   color:var(--red);
   font-weight:bold;
@@ -201,13 +190,11 @@ h2{
 .news{
   background:#fff;
 }
-
 .news-grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
   gap:30px;
 }
-
 .news-item{
   background:var(--gray);
   padding:20px;
@@ -221,13 +208,11 @@ h2{
   grid-template-columns:2fr 1fr;
   gap:30px;
 }
-
 .casalinghi-grid img{
   width:100%;
   border-radius:12px;
   box-shadow:0 10px 25px rgba(0,0,0,.15);
 }
-
 .casalinghi-right img{margin-bottom:20px;}
 
 /* ===== FOOTER ===== */
@@ -265,33 +250,46 @@ footer{
   </div>
 </header>
 
+<!-- MENU -->
 <nav class="menu">
   <li>
-    <a href="#casalinghi">CASALINGHI</a>
+    <a href="#casalinghi" class="card">CASALINGHI</a>
     <div class="submenu">
-      <a href="#">Ferramenta</a><a href="#">Auto</a><a href="#">Giardinaggio</a>
-      <a href="#">Sport</a><a href="#">Stagionale</a><a href="#">Giocattoli</a>
-      <a href="#">Cucito</a><a href="#">Festa</a><a href="#">Plastica</a><a href="#">Pulizia</a>
+      <a href="#">Ferramenta</a>
+      <a href="#">Auto</a>
+      <a href="#">Giardinaggio</a>
+      <a href="#">Sport</a>
+      <a href="#">Stagionale</a>
+      <a href="#">Giocattoli</a>
+      <a href="#">Cucito</a>
+      <a href="#">Festa</a>
+      <a href="#">Plastica</a>
+      <a href="#">Pulizia</a>
     </div>
   </li>
+
   <li>
-    <a href="#">ABBIGLIAMENTO</a>
+    <a href="#" class="card">ABBIGLIAMENTO</a>
     <div class="submenu">
-      <a href="#">Uomo</a><a href="#">Donna</a><a href="#">Calzature</a>
+      <a href="#">Uomo</a>
+      <a href="#">Donna</a>
+      <a href="#">Calzature</a>
     </div>
   </li>
- <a href="#">CARTOLERIA</a>
-  <a href="#">MOBILI</a>
-  <a href="#">PET</a>
-  <a href="#">ARREDAMENTO</a>
-  <a href="#">IDEE REGALO</a>
-  <a href="#">DETERSIVI</a>
-  <a href="#">CUCINA</a>
-  <a href="#">FIORI</a>
+
+  <a href="#" class="card">CARTOLERIA</a>
+  <a href="#" class="card">MOBILI</a>
+  <a href="#" class="card">PET</a>
+  <a href="#" class="card">ARREDAMENTO</a>
+  <a href="#" class="card">IDEE REGALO</a>
+  <a href="#" class="card">DETERSIVI</a>
+  <a href="#" class="card">CUCINA</a>
+  <a href="#" class="card">FIORI</a>
   <a href="#" class="card">ONE HOME CARD</a>
   <a href="#promo" class="promo">PROMO</a>
 </nav>
 
+<!-- SLIDER MARCHI -->
 <div class="brands">
   <div class="brands-track">
     <img src="IMAGE/girmi.jpg">
@@ -305,16 +303,17 @@ footer{
   </div>
 </div>
 
+<!-- PROMOZIONI -->
 <section id="promo" class="promo-month">
   <div class="promo-wrapper">
     <h2 class="promo-title">PROMOZIONI DEL MESE</h2>
-    <p style="text-align:center">
+    <p class="promo-text">
       Occasioni imperdibili selezionate per te: qualità, convenienza e novità ogni mese.
     </p>
 
     <div class="promo-layout">
       <div class="promo-poster">
-        <img src="IMAGE/COMPRABENE1.JPG">
+        <img src="IMAGE/COMPRABENE1.JPG" alt="Volantino Promozioni">
       </div>
 
       <div class="promo-grid">
@@ -329,6 +328,7 @@ footer{
   </div>
 </section>
 
+<!-- NOVITÀ -->
 <section class="news">
   <h2>NOVITÀ</h2>
   <p style="text-align:center">
@@ -342,6 +342,7 @@ footer{
   </div>
 </section>
 
+<!-- CASALINGHI -->
 <section id="casalinghi">
   <h2>CASALINGHI</h2>
   <div class="casalinghi-grid">
@@ -353,6 +354,7 @@ footer{
   </div>
 </section>
 
+<!-- CHI SIAMO -->
 <section>
   <h2>CHI SIAMO</h2>
   <p style="text-align:center">
@@ -360,6 +362,7 @@ footer{
   </p>
 </section>
 
+<!-- DOVE SIAMO -->
 <section>
   <h2>DOVE SIAMO</h2>
   <p style="text-align:center">
