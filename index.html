@@ -37,31 +37,23 @@ header{
   display:flex;
   gap:20px;
 }
-
 .header-left a{
   font-size:30px;
   color:#000;
 }
 .header-left a:hover{ color:var(--red); }
 
-.header-center{
-  text-align:center;
-  margin-left:40px; /* micro spostamento verso destra */
-}
-
 .header-center img{
   height:120px;
 }
 
 .header-right{
-  text-align:right;
   font-weight:bold;
+  text-align:right;
 }
 
-/* slogan sotto logo */
 .header-slogan{
   text-align:center;
-  font-size:1.1rem;
   margin-bottom:20px;
   letter-spacing:1px;
 }
@@ -71,11 +63,10 @@ header{
   background:#000;
   display:flex;
   justify-content:center;
-  gap:28px;
-  padding:16px;
+  gap:25px;
+  padding:15px;
   flex-wrap:wrap;
 }
-
 .menu a{
   color:#fff;
   text-decoration:none;
@@ -84,10 +75,37 @@ header{
 .menu a:hover{ color:var(--red); }
 .menu .promo{ color:var(--red); }
 
+/* ===== DROPDOWN ===== */
+.dropdown{
+  position:relative;
+}
+.dropdown-content{
+  display:none;
+  position:absolute;
+  background:#000;
+  min-width:220px;
+  top:100%;
+  left:0;
+  z-index:10;
+}
+.dropdown-content a{
+  display:block;
+  padding:10px 15px;
+  font-size:0.95rem;
+}
+.dropdown-content a:hover{
+  background:var(--red);
+}
+.dropdown:hover .dropdown-content{
+  display:block;
+}
+
 /* ===== SLIDER MARCHI ===== */
 .brands{
+  background:#fff;
   padding:40px 0;
   overflow:hidden;
+  border-bottom:1px solid #eee;
 }
 
 .brands-track{
@@ -99,36 +117,12 @@ header{
 
 .brands img{
   height:70px;
+  filter:none; /* colori originali */
 }
 
 @keyframes scroll{
   from{ transform:translateX(0); }
   to{ transform:translateX(-50%); }
-}
-
-/* ===== SEZIONI ===== */
-section{
-  max-width:1100px;
-  margin:auto;
-  padding:60px 20px;
-}
-
-h2{
-  text-align:center;
-  color:var(--red);
-  letter-spacing:2px;
-  margin-bottom:40px;
-}
-
-.promo-section{
-  background:var(--gray);
-}
-
-footer{
-  background:#000;
-  color:#fff;
-  text-align:center;
-  padding:30px;
 }
 </style>
 </head>
@@ -136,22 +130,18 @@ footer{
 <body>
 
 <header>
-
   <div class="header-top">
 
-    <!-- SINISTRA -->
     <div class="header-left">
       <a href="https://www.google.com/maps/place/ONE+HOME+%26+FASHION/" target="_blank"><i class="fas fa-map-marker-alt"></i></a>
       <a href="https://www.instagram.com/one_home_fashion_/" target="_blank"><i class="fab fa-instagram"></i></a>
       <a href="https://wa.me/39055959556" target="_blank"><i class="fab fa-whatsapp"></i></a>
     </div>
 
-    <!-- CENTRO -->
     <div class="header-center">
       <img src="IMAGE/logo1.jpg" alt="ONE HOME & FASHION">
     </div>
 
-    <!-- DESTRA -->
     <div class="header-right">
       Via della Comunità Europea 18<br>
       Figline Incisa Valdarno (FI)
@@ -159,16 +149,30 @@ footer{
 
   </div>
 
-  <!-- SLOGAN -->
   <div class="header-slogan">
     ONE HOME & FASHION – ABBIGLIAMENTO E CASALINGHI
   </div>
-
 </header>
 
 <!-- MENU -->
 <nav class="menu">
-  <a href="#">CASALINGHI</a>
+
+  <div class="dropdown">
+    <a href="casalinghi.html">CASALINGHI</a>
+    <div class="dropdown-content">
+      <a href="casalinghi.html#ferramenta">Ferramenta</a>
+      <a href="casalinghi.html#auto">Reparto Auto</a>
+      <a href="casalinghi.html#giardinaggio">Giardinaggio</a>
+      <a href="casalinghi.html#sport">Sport</a>
+      <a href="casalinghi.html#stagionale">Stagionale</a>
+      <a href="casalinghi.html#giocattoli">Giocattoli</a>
+      <a href="casalinghi.html#cucito">Cucito</a>
+      <a href="casalinghi.html#festa">Festa</a>
+      <a href="casalinghi.html#plastica">Plastica</a>
+      <a href="casalinghi.html#pulizia">Pulizia</a>
+    </div>
+  </div>
+
   <a href="#">ABBIGLIAMENTO</a>
   <a href="#">CARTOLERIA</a>
   <a href="#">ARREDAMENTO</a>
@@ -176,53 +180,24 @@ footer{
   <a href="#">CUCINA</a>
   <a href="#">FIORI</a>
   <a href="#" class="promo">PROMO</a>
+
 </nav>
 
-<!-- SLIDER MARCHI -->
+<!-- ===== SLIDER MARCHI ===== -->
 <div class="brands">
   <div class="brands-track">
-    <img src="IMAGE/girmi.jpg">
-    <img src="IMAGE/tognana.jpg">
-    <img src="IMAGE/pedrini.jpg">
-    <img src="IMAGE/aeternum.jpg">
-    <img src="IMAGE/girmi.jpg">
-    <img src="IMAGE/tognana.jpg">
-    <img src="IMAGE/pedrini.jpg">
-    <img src="IMAGE/aeternum.jpg">
+    <img src="IMAGE/girmi.jpg" alt="Girmi">
+    <img src="IMAGE/tognana.jpg" alt="Tognana">
+    <img src="IMAGE/pedrini.jpg" alt="Pedrini">
+    <img src="IMAGE/aeternum.jpg" alt="Aeternum">
+
+    <!-- duplicati per loop fluido -->
+    <img src="IMAGE/girmi.jpg" alt="">
+    <img src="IMAGE/tognana.jpg" alt="">
+    <img src="IMAGE/pedrini.jpg" alt="">
+    <img src="IMAGE/aeternum.jpg" alt="">
   </div>
 </div>
-
-<!-- PROMO -->
-<section class="promo-section">
-  <h2>PROMO</h2>
-  <p style="text-align:center">Offerte disponibili in negozio.</p>
-</section>
-
-<!-- NOVITA -->
-<section>
-  <h2>NOVITÀ</h2>
-  <p style="text-align:center">Nuovi arrivi e prodotti selezionati.</p>
-</section>
-
-<!-- CHI SIAMO -->
-<section>
-  <h2>CHI SIAMO</h2>
-  <p style="text-align:center">
-    ONE HOME & FASHION è il punto di riferimento per la casa e l’abbigliamento.
-  </p>
-</section>
-
-<!-- DOVE SIAMO -->
-<section>
-  <h2>DOVE SIAMO</h2>
-  <p style="text-align:center">
-    Via della Comunità Europea 18 – Figline Incisa Valdarno (FI)
-  </p>
-</section>
-
-<footer>
-  © 2026 ONE HOME & FASHION
-</footer>
 
 </body>
 </html>
