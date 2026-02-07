@@ -77,8 +77,20 @@ header{border-bottom:1px solid #ddd;}
 }
 .menu a:hover{color:var(--red);}
 .menu .promo{color:var(--red);}
-.menu .card{border:1px solid var(--red); padding:6px 12px;}
+.menu a.card{
+  color:#fff;           /* colore testo */
+  background:var(--red);/* sfondo rosso */
+  padding:8px 15px;
+  border-radius:5px;
+  font-weight:bold;
+  text-decoration:none;
+  transition:0.3s;
+}
 
+.menu a.card:hover{
+  background:#800000;   /* scuro al passaggio mouse */
+  color:#fff;
+}
 .menu li{list-style:none; position:relative;}
 .submenu{
   display:none;
@@ -268,16 +280,14 @@ footer{
       <a href="#">Uomo</a><a href="#">Donna</a><a href="#">Calzature</a>
     </div>
   </li>
-  <a href="#" class="card">ABBIGLIAMENTO</a
-  <a href="#" class="card">ARREDAMENTO</a
-  <a href="#" class="card">CASALINGHI</a
-  <a href="#" class="card">CARTOLERIA</a
-  <a href="#" class="card">CUCINA</a
-  <a href="#" class="card">DETERSIVI</a
-  <a href="#" class="card">FIORI</a
-  <a href="#" class="card">IDEE REGALO</a
-  <a href="#" class="card">MOBILI</a
-  <a href="#" class="card">PET</a
+ <a href="#">CARTOLERIA</a>
+  <a href="#">MOBILI</a>
+  <a href="#">PET</a>
+  <a href="#">ARREDAMENTO</a>
+  <a href="#">IDEE REGALO</a>
+  <a href="#">DETERSIVI</a>
+  <a href="#">CUCINA</a>
+  <a href="#">FIORI</a>
   <a href="#" class="card">ONE HOME CARD</a>
   <a href="#promo" class="promo">PROMO</a>
 </nav>
