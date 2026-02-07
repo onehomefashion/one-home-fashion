@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Casalinghi – ONE HOME & FASHION</title>
+
+<style>
+body{
+  margin:0;
+  font-family:Arial, Helvetica, sans-serif;
+  background:#fff;
+  color:#000;
+}
+
+header{
+  padding:30px;
+  text-align:center;
+  border-bottom:1px solid #ddd;
+}
+
+header h1{
+  color:#c00000;
+  letter-spacing:2px;
+}
+
+/* LAYOUT SFALSATO */
+.gallery{
+  max-width:1100px;
+  margin:60px auto;
+  padding:0 20px;
+  display:grid;
+  grid-template-columns:2fr 1fr;
+  gap:30px;
+}
+
+.big{
+  grid-row:span 2;
+}
+
+.gallery img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  border-radius:10px;
+  box-shadow:0 10px 25px rgba(0,0,0,.15);
+  transition:transform .3s;
+}
+
+.gallery img:hover{
+  transform:scale(1.03);
+}
+
+.section-title{
+  max-width:1100px;
+  margin:80px auto 20px;
+  padding:0 20px;
+  font-size:1.5rem;
+  color:#c00000;
+  letter-spacing:1px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>CASALINGHI</h1>
+  <p>Scopri i nostri reparti dedicati alla casa</p>
+</header>
+
+<!-- FERRAMENTA -->
+<div id="ferramenta" class="section-title">Ferramenta</div>
+<div class="gallery">
+  <div class="big">
+    <img src="IMAGE/ferramenta.jpg" alt="Ferramenta">
+  </div>
+  <img src="IMAGE/cornici1.jpg" alt="Casalinghi">
+  <img src="IMAGE/COSMETICI1.jpg" alt="Casalinghi">
+</div>
+
+<!-- GIOCATTOLI -->
+<div id="giocattoli" class="section-title">Giocattoli</div>
+<div class="gallery">
+  <div class="big">
+    <img src="IMAGE/giocattoli1.jpg" alt="Giocattoli">
+  </div>
+  <img src="IMAGE/cornici1.jpg" alt="Giocattoli">
+  <img src="IMAGE/COSMETICI1.jpg" alt="Giocattoli">
+</div>
+
+</body>
+</html>
