@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ONE HOME & FASHION</title>
 
-<!-- ICONS -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
@@ -18,81 +17,87 @@
 body{
   margin:0;
   font-family:Arial, Helvetica, sans-serif;
-  background:white;
-  color:black;
+  background:#fff;
+  color:#000;
 }
 
-/* ===== HEADER TOP ===== */
-.header-bar{
-  position:relative;
+/* ===== HEADER ===== */
+header{
+  border-bottom:1px solid #ddd;
+}
+
+.header-top{
   display:flex;
-  justify-content:space-between;
   align-items:center;
-  padding:25px 35px;
+  justify-content:space-between;
+  padding:20px 30px;
 }
 
 .header-left{
   display:flex;
-  gap:22px;
-  z-index:2;
+  gap:20px;
 }
 
 .header-left a{
-  font-size:34px;
-  color:black;
+  font-size:30px;
+  color:#000;
 }
 .header-left a:hover{ color:var(--red); }
 
+.header-center{
+  text-align:center;
+}
+
+.header-center img{
+  height:120px;
+}
+
 .header-right{
   text-align:right;
-  font-size:1.05rem;
   font-weight:bold;
-  z-index:2;
 }
 
-/* LOGO CENTRATO ASSOLUTO */
-.header-logo{
-  position:absolute;
-  left:50%;
-  transform:translateX(-50%);
-  z-index:1;
-}
-.header-logo img{
-  height:130px;
+/* slogan sotto logo */
+.header-slogan{
+  text-align:center;
+  font-size:1.1rem;
+  margin-bottom:20px;
+  letter-spacing:1px;
 }
 
-/* ===== MENU REPARTI ===== */
+/* ===== MENU ===== */
 .menu{
-  background:black;
+  background:#000;
   display:flex;
   justify-content:center;
-  gap:30px;
-  padding:18px;
+  gap:28px;
+  padding:16px;
   flex-wrap:wrap;
 }
+
 .menu a{
-  color:white;
+  color:#fff;
   text-decoration:none;
   font-weight:bold;
-  font-size:1.05rem;
 }
 .menu a:hover{ color:var(--red); }
+.menu .promo{ color:var(--red); }
 
 /* ===== SLIDER MARCHI ===== */
 .brands{
-  background:#ffffff;
   padding:40px 0;
   overflow:hidden;
 }
+
 .brands-track{
   display:flex;
   gap:80px;
-  animation:scroll 20s linear infinite;
   align-items:center;
+  animation:scroll 22s linear infinite;
 }
+
 .brands img{
   height:70px;
-  filter:none; /* colori originali */
 }
 
 @keyframes scroll{
@@ -110,38 +115,17 @@ section{
 h2{
   text-align:center;
   color:var(--red);
-  margin-bottom:40px;
   letter-spacing:2px;
+  margin-bottom:40px;
 }
 
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:30px;
-}
-
-.card{
-  background:#fff;
-  padding:25px;
-  box-shadow:0 5px 15px rgba(0,0,0,.1);
-  border-radius:8px;
-}
-
-/* PROMO */
-.promo{
+.promo-section{
   background:var(--gray);
 }
 
-/* NOVITA */
-.novita{
-  background:white;
-  border-top:4px solid var(--red);
-}
-
-/* FOOTER */
 footer{
-  background:black;
-  color:white;
+  background:#000;
+  color:#fff;
   text-align:center;
   padding:30px;
 }
@@ -150,25 +134,36 @@ footer{
 
 <body>
 
-<!-- HEADER -->
-<div class="header-bar">
+<header>
 
-  <div class="header-left">
-    <a href="https://www.google.com/maps/place/ONE+HOME+%26+FASHION/" target="_blank"><i class="fas fa-map-marker-alt"></i></a>
-    <a href="https://www.instagram.com/one_home_fashion_/" target="_blank"><i class="fab fa-instagram"></i></a>
-    <a href="https://wa.me/39055959556" target="_blank"><i class="fab fa-whatsapp"></i></a>
+  <div class="header-top">
+
+    <!-- SINISTRA -->
+    <div class="header-left">
+      <a href="https://www.google.com/maps/place/ONE+HOME+%26+FASHION/" target="_blank"><i class="fas fa-map-marker-alt"></i></a>
+      <a href="https://www.instagram.com/one_home_fashion_/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://wa.me/39055959556" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    </div>
+
+    <!-- CENTRO -->
+    <div class="header-center">
+      <img src="IMAGE/logo1.jpg" alt="ONE HOME & FASHION">
+    </div>
+
+    <!-- DESTRA -->
+    <div class="header-right">
+      Via della Comunità Europea 18<br>
+      Figline Incisa Valdarno (FI)
+    </div>
+
   </div>
 
-  <div class="header-logo">
-    <img src="IMAGE/logo1.jpg" alt="ONE HOME & FASHION">
+  <!-- SLOGAN -->
+  <div class="header-slogan">
+    ONE HOME & FASHION – ABBIGLIAMENTO E CASALINGHI
   </div>
 
-  <div class="header-right">
-    Via della Comunità Europea 18<br>
-    Figline Incisa Valdarno (FI)
-  </div>
-
-</div>
+</header>
 
 <!-- MENU -->
 <nav class="menu">
@@ -179,7 +174,7 @@ footer{
   <a href="#">PET</a>
   <a href="#">CUCINA</a>
   <a href="#">FIORI</a>
-  <a href="#" style="color:var(--red)">PROMO</a>
+  <a href="#" class="promo">PROMO</a>
 </nav>
 
 <!-- SLIDER MARCHI -->
@@ -189,7 +184,6 @@ footer{
     <img src="IMAGE/tognana.jpg">
     <img src="IMAGE/pedrini.jpg">
     <img src="IMAGE/aeternum.jpg">
-    <!-- duplicati per loop -->
     <img src="IMAGE/girmi.jpg">
     <img src="IMAGE/tognana.jpg">
     <img src="IMAGE/pedrini.jpg">
@@ -198,13 +192,13 @@ footer{
 </div>
 
 <!-- PROMO -->
-<section class="promo">
+<section class="promo-section">
   <h2>PROMO</h2>
-  <p style="text-align:center">Scopri le offerte disponibili in negozio.</p>
+  <p style="text-align:center">Offerte disponibili in negozio.</p>
 </section>
 
 <!-- NOVITA -->
-<section class="novita">
+<section>
   <h2>NOVITÀ</h2>
   <p style="text-align:center">Nuovi arrivi e prodotti selezionati.</p>
 </section>
@@ -213,8 +207,7 @@ footer{
 <section>
   <h2>CHI SIAMO</h2>
   <p style="text-align:center">
-    ONE HOME & FASHION è il punto di riferimento per casalinghi,
-    abbigliamento e idee per la casa, con oltre 30.000 articoli selezionati.
+    ONE HOME & FASHION è il punto di riferimento per la casa e l’abbigliamento.
   </p>
 </section>
 
@@ -223,14 +216,6 @@ footer{
   <h2>DOVE SIAMO</h2>
   <p style="text-align:center">
     Via della Comunità Europea 18 – Figline Incisa Valdarno (FI)
-  </p>
-</section>
-
-<!-- CONTATTI -->
-<section>
-  <h2>CONTATTI</h2>
-  <p style="text-align:center">
-    Seguici sui social o contattaci su WhatsApp per informazioni.
   </p>
 </section>
 
