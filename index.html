@@ -64,7 +64,7 @@ header{border-bottom:1px solid #ddd;}
 /* ===== MENU ===== */
 .menu{
   background:#000;
-  padding:20px 10px;  /* aumenta altezza barra */
+  padding:18px 10px;
   display:flex;
   justify-content:center;
 }
@@ -73,20 +73,24 @@ header{border-bottom:1px solid #ddd;}
   display:flex;
   width:100%;
   max-width:1400px;
-  justify-content:space-between;
   align-items:center;
-  margin:0;
-  padding:0;
-  list-style:none;
+  gap:20px;
 }
 
+/* colonne */
 .menu-left,
 .menu-center,
 .menu-right{
   display:flex;
-  gap:15px;
+  gap:12px;
   align-items:center;
+  flex-wrap:wrap;
 }
+
+/* larghezze equilibrate */
+.menu-left{flex:1;}
+.menu-center{flex:0 0 auto;}
+.menu-right{flex:1; justify-content:flex-end;}
 
 /* STILE PROMO (centrato) */
 .menu-center .promo{
